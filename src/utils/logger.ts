@@ -56,7 +56,7 @@ export class Logger {
     static error(str: any) {
         if (Logger.isError) {
             if (Logger.colors && SupportsColors.stderr) {
-                console.error(Chalk.red(str));
+                console.error(Chalk.red(JSON.stringify(str)));
             } else {
                 console.error(str);
             }
